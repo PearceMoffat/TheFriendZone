@@ -1,1 +1,2 @@
 # TheFriendZone
+The Friend Zone is a friend matching application. Click the Survey button to access the survey. Type your name and a link to your profile image, then answer the 10 personality questions on a scale from 1(strongly disagree) to 7(strongly agree). When you fill out all information and hit submit, your best friend match will pop up.

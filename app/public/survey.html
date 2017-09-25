@@ -202,9 +202,22 @@
 				$.post(currentURL + "/api/friends", user, function (data) {
 
 					// Set the modal information to be the closest match, then display the modal
+					// and clear the input fields
 					$("#bestFriendName").text(data.name);
 					$("#bestFriendPic").attr("src", data.image);
 					$("#myModal").modal('toggle');
+					$("#q1").val("");
+					$("#q2").val("");
+					$("#q3").val("");
+					$("#q4").val("");
+					$("#q5").val("");
+					$("#q6").val("");
+					$("#q7").val("");
+					$("#q8").val("");
+					$("#q9").val("");
+					$("#q10").val("");
+					$("#name").val("");
+					$("#image").val("");
 				});
 			}
 			// If any field is empty, alert the user
