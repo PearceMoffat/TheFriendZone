@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Friend Survey</title>
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+		 crossorigin="anonymous">
+		<script src="https://code.jquery.com/jquery.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+		 crossorigin="anonymous"></script>
+
+	</head>
+</head>
+
+<body>
+	<div class="container">
+		<div class="modal fade" id="myModal" role="dialog">
+			<div class="modal-dialog">
+
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title" style="text-align:center">Your Best Match</h4>
+					</div>
+					<div class="modal-body" style="text-align:center">
+						<h2 id="bestFriendName"></h2>
+						<img id="bestFriendPic" src="" style="width: 400px;height: 400px">
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<h1>Fill out the survey to get a match!</h1>
+		<hr>
+		<h2>About You</h2>
+		<h3>Your Name</h3>
+		<input type="text" id="name" class="form-control" required>
+		<h3>Link to image</h3>
+		<input type="text" id="image" class="form-control" required>
+		<br><br>
+		<hr>
+		<h2>Select 1-5 for the following questions.</h2>
+		<h3>I see myself as extraverted, enthusiastic.</h3>
+		<select class="selector" id="q1">
+    	  <option value="">Select an option</option>
+		  <option value="1">1 (Strongly Disagree)</option>
+		  <option value="2">2</option>
+		  <option value="3">3</option>
+		  <option value="4">4</option>
+		  <option value="5">5</option>
+		  <option value="6">6</option>
+		  <option value="7">7 (Strongly Agree)</option>
+		</select>
+		<h3>I see myself as critical, quarrelsome.</h3>
+		<select class="selector" id="q2">
+		  <option value="">Select an option</option>
+		  <option value="1">1 (Strongly Disagree)</option>
+		  <option value="2">2</option>
+		  <option value="3">3</option>
+		  <option value="4">4</option>
+		  <option value="5">5</option>
+		  <option value="6">6</option>
+		  <option value="7">7 (Strongly Agree)</option>
+		</select>
+		<h3>I see myself as dependable, self-disciplined.</h3>
+		<select class="selector" id="q3">
+		  <option value="">Select an option</option>
+		  <option value="1">1 (Strongly Disagree)</option>
+		  <option value="2">2</option>
+		  <option value="3">3</option>
+		  <option value="4">4</option>
+		  <option value="5">5</option>
+		  <option value="6">6</option>
+		  <option value="7">7 (Strongly Agree)</option>
+		</select>
+		<h3>I see myself as anxious, easily upset.</h3>
+		<select class="selector" id="q4">
+		  <option value="">Select an option</option>
+		  <option value="1">1 (Strongly Disagree)</option>
+		  <option value="2">2</option>
+		  <option value="3">3</option>
+		  <option value="4">4</option>
+		  <option value="5">5</option>
+		  <option value="6">6</option>
+		  <option value="7">7 (Strongly Agree)</option>
+		</select>
+		<h3>I see myself as open to new experiences, complex.</h3>
+		<select class="selector" id="q5">
+		  <option value="">Select an option</option>
+		  <option value="1">1 (Strongly Disagree)</option>
+		  <option value="2">2</option>
+		  <option value="3">3</option>
+		  <option value="4">4</option>
+		  <option value="5">5</option>
+		  <option value="6">6</option>
+		  <option value="7">7 (Strongly Agree)</option>
+		</select>
+		<h3>I see myself as reserved, quiet.</h3>
+		<select class="selector" id="q6">
+		  <option value="">Select an option</option>
+		  <option value="1">1 (Strongly Disagree)</option>
+		  <option value="2">2</option>
+		  <option value="3">3</option>
+		  <option value="4">4</option>
+		  <option value="5">5</option>
+		  <option value="6">6</option>
+		  <option value="7">7 (Strongly Agree)</option>
+		</select>
+		<h3>I see myself as sympathetic, warm.</h3>
+		<select class="selector" id="q7">
+		  <option value="">Select an option</option>
+		  <option value="1">1 (Strongly Disagree)</option>
+		  <option value="2">2</option>
+		  <option value="3">3</option>
+		  <option value="4">4</option>
+		  <option value="5">5</option>
+		  <option value="6">6</option>
+		  <option value="7">7 (Strongly Agree)</option>
+		</select>
+		<h3>I see myself as disorganized, careless.</h3>
+		<select class="selector" id="q8">
+		  <option value="">Select an option</option>
+		  <option value="1">1 (Strongly Disagree)</option>
+		  <option value="2">2</option>
+		  <option value="3">3</option>
+		  <option value="4">4</option>
+		  <option value="5">5</option>
+		  <option value="6">6</option>
+		  <option value="7">7 (Strongly Agree)</option>
+		</select>
+		<h3>I see myself as calm, emotionally stable.</h3>
+		<select class="selector" id="q9">
+		  <option value="">Select an option</option>
+		  <option value="1">1 (Strongly Disagree)</option>
+		  <option value="2">2</option>
+		  <option value="3">3</option>
+		  <option value="4">4</option>
+		  <option value="5">5</option>
+		  <option value="6">6</option>
+		  <option value="7">7 (Strongly Agree)</option>
+		</select>
+		<h3>I see myself as conventional, uncreative.</h3>
+		<select class="selector" id="q10">
+		  <option value="">Select an option</option>
+		  <option value="1">1 (Strongly Disagree)</option>
+		  <option value="2">2</option>
+		  <option value="3">3</option>
+		  <option value="4">4</option>
+		  <option value="5">5</option>
+		  <option value="6">6</option>
+		  <option value="7">7 (Strongly Agree)</option>
+		</select>
+		<br><br>
+		<button type="button" class="btn btn-lg btn-primary" id="submit" style="width: 400px">Submit</button>
+		<hr>
+		<a href="/api/friends">Friend List</a> |
+		<a href="https://github.com/PearceMoffat/TheFriendZone" target="_blank">Git Hub Repo</a>
+		<br><br>
+	</div>
+	<!-- Javascript for the survey page-->
+	<script type="text/javascript">
+		// This function is to confirm all fields have been filled out before submitting
+		function validateForm() {
+			var isValid = true;
+			// Check each .form-control class div
+			$('.form-control').each(function () {
+				if ($(this).val() === "") {
+					isValid = false;
+				}
+			});
+			// Check each question
+			$('.selector').each(function () {
+
+				if ($(this).val() === "") {
+					isValid = false;
+				}
+			});
+
+			return isValid;
+		}
+		// Code to handle the submit button being clicked
+		$("#submit").on("click", function () {
+			// First make sure all forms are filled out
+			if (validateForm() == true) {
+				// Create an object with the users submitted information
+				var user = {
+					name: $("#name").val(),
+					photo: $("#image").val(),
+					scores: [$("#q1").val(), $("#q2").val(), $("#q3").val(), $("#q4").val(), $("#q5").val(), $("#q6").val(), $("#q7").val(), $("#q8").val(), $("#q9").val(), $("#q10").val(),]
+				}
+
+				var currentURL = window.location.origin;
+				// Send a post to the server, passing the newly created user object
+				$.post(currentURL + "/api/friends", user, function (data) {
+
+					// Set the modal information to be the closest match, then display the modal
+					$("#bestFriendName").text(data.name);
+					$("#bestFriendPic").attr("src", data.image);
+					$("#myModal").modal('toggle');
+				});
+			}
+			// If any field is empty, alert the user
+			else {
+				alert("Please fill out all fields before submitting!");
+			}
+			return false;
+		});
+	</script>
+</body>
+
+</html>
